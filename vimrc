@@ -25,11 +25,11 @@ Bundle 'git://git.wincent.com/command-t.git'
 " ...
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
-Bundle 'vim-scripts/The-NERD-tree'
-Bundle 'vim-scripts/a.vim'
-Bundle 'vim-scripts/minibufexpl.vim'
-Bundle 'vim-scripts/taglist.vim'
-
+Bundle 'The-NERD-tree'
+Bundle 'a.vim'
+Bundle 'google.vim'
+Bundle 'minibufexpl.vim'
+Bundle 'taglist.vim'
 
 filetype plugin indent on     " required!
 "
@@ -44,6 +44,7 @@ filetype plugin indent on     " required!
 
 let g:ycm_confirm_extra_conf = 0
 let g:syntastic_ignore_files=[".*\.py$"]
+let g:ycm_global_ycm_extra_conf='/home/win/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 
 syntax on
 set mouse=a
@@ -54,5 +55,10 @@ set autoindent
 set cindent
 set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s
 set nocp
+set nu
+set hlsearch
+set incsearch
 set backspace=indent,eol,start
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>jc :YcmCompleter GoToDeclaration<CR>
 
