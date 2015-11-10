@@ -31,6 +31,7 @@ Bundle 'a.vim'
 Bundle 'google.vim'
 Bundle 'minibufexpl.vim'
 Bundle 'taglist.vim'
+Bundle 'Lokaltog/vim-powerline'
 call vundle#end()
 filetype plugin indent on     " required!
 "
@@ -90,3 +91,13 @@ if has("autocmd")
   autocmd BufNewFile *.spec 0r /usr/share/vim/vimfiles/template.spec
   augroup END
 endif
+
+
+"powerline{
+set guifont=PowerlineSymbols\ for\ Powerline
+set nocompatible
+set laststatus=2
+set t_Co=256
+let g:Powerline_symbols = 'fancy'
+let Powerline_symbols='compatible'
+"}
